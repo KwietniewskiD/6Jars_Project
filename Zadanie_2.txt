@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 class Main {
-  public static boolean isSubString(String str1, String str2)
+  boolean isSubString(String str1, String str2)
   {
     return true;
   }
