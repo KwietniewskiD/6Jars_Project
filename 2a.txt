@@ -15,5 +15,15 @@ class Main {
     System.out.println("Wpisz szukane zdanie");
     String zdanie=in.nextLine();
 
+    if(isSubString(slowo, zdanie))
+    {
+      System.out.println("Tak, zawiera sie");
+    }
+    else
+    {
+      System.out.println("Nie, nie zawiera sie");
+    }
+
+
   }
 }
