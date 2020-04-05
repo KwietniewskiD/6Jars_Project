@@ -5,7 +5,18 @@ class Main {
   {
     for(int i=0;i<str2.length();i++)
     {
-      
+      if(str2.charAt(i)==str1.charAt(0))
+      {
+        int k=i;
+        for(int j=0;j<str1.length();j++)
+        {
+          if(str2.charAt(k)!=str1.charAt(i));
+          {
+            break;
+          }
+          k=k+1;
+        }
+      }
     }
     return true;
   }
