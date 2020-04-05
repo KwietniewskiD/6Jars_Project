@@ -14,7 +14,7 @@ class Main {
           {
             break;
           }
-          int k=k+1;
+          k=k+1;
         }
       }
     }
