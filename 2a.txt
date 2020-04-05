@@ -12,5 +12,8 @@ class Main {
     System.out.println("Wpisz szukane slowo");
     String slowo=in.nextLine();
 
+    System.out.println("Wpisz szukane zdanie");
+    String zdanie=in.nextLine();
+
   }
 }
