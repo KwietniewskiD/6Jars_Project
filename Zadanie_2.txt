@@ -3,6 +3,10 @@ import java.util.Scanner;
 class Main {
   public static boolean isSubString(String str1, String str2)
   {
+    for(int i=0;i<str2.length();i++)
+    {
+      
+    }
     return true;
   }
 
