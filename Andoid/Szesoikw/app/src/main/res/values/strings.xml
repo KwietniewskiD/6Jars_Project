@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Sześć słoików</string>
+    <string name="button_add">Wpłać</string>
+    <string name="deposit">Ile wpłacasz</string>
+    <string name="textJar1">Opłaty stałe</string>
+
+    <string name="textJar2">Przyjemności</string>
+
+    <string name="textJar3">Inwestycje</string>
+
+    <string name="textJar4">Edukacja</string>
+
+    <string name="textJar5">Większe zakupy</string>
+
+    <string name="textJar6">Datki</string>
+
+</resources>
