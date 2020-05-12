@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private Button pobierz;
 
     //utowrzenie zmiennych pomocniczych
-    private double d55, d10, d5, d;
+    private float d55, d10, d5, d;
 
     //funckja która jest wywoływana przy starcie aplikacji
     @Override
@@ -41,8 +41,7 @@ public class MainActivity extends AppCompatActivity {
         zakupy=(TextView)findViewById(R.id.textValue5);
         datki=(TextView)findViewById(R.id.textValue6);
 
-        malaBaza = getSharedPreferences("plikZapisu",
-                Context.MODE_PRIVATE);
+        malaBaza = getSharedPreferences("plikZapisu", Context.MODE_PRIVATE);
 
         //Pobranie zapisanych wartości
         if (malaBaza.contains("Jar1"))
@@ -85,15 +84,73 @@ public class MainActivity extends AppCompatActivity {
     //nowa metoda
     public void onClickButtonAdd(View view)
     {
+        SharedPreferences.Editor editor = malaBaza.edit();
 
+        d=Float.parseFloat(deposit.getText().toString()); //zmiana tekstu na liczbę
+
+        d55=d*0.55F;
+        d10=d*0.1F;
+        d5=d*0.05F;
+
+        if (malaBaza.contains("Jar1"))
+        {
+            oplaty.setText(malaBaza.getFloat("jar1", 0.0F)+d55+"zł");
+        }
+        else
+        {
+            oplaty.setText(d55+"zł");
+            //zapiszdobazy
+        }
+
+        if (malaBaza.contains("Jar2"))
+        {
+            przyjemnosci.setText(malaBaza.getFloat("jar2", 0.0F)+d10+"zł");
+        }
+        else
+        {
+            przyjemnosci.setText(d10+"zł");
+        }
+
+        if (malaBaza.contains("Jar3"))
+        {
+            inwestycje.setText(malaBaza.getFloat("jar3", 0.0F)+d10+"zł");
+        }
+        else
+        {
+            inwestycje.setText(d10+"zł");
+        }
+
+        if (malaBaza.contains("Jar4"))
+        {
+            edukacja.setText(malaBaza.getFloat("jar4", 0.0F)+d10+"zł");
+        }
+        else
+        {
+            edukacja.setText(d10+"zł");
+        }
+
+        if (malaBaza.contains("Jar5"))
+        {
+            zakupy.setText(malaBaza.getFloat("jar5", 0.0F)+d10+"zł");
+        }
+        else
+        {
+            zakupy.setText(d10+"zł");
+        }
+
+
+        if (malaBaza.contains("Jar6"))
+        {
+            datki.setText(malaBaza.getFloat("jar6", 0.0F)+d5+"zł");
+        }
+        else
+        {
+            datki.setText(d5+"zł");
+        }
 
         //oplaty.setText(deposit.getText().toString()); przykład przypisania EditTextu do TextView
 
-        d=Integer.parseInt(deposit.getText().toString()); //zmiana tekstu na liczbę
 
-        d55=d*0.55;
-        d10=d*0.1;
-        d5=d*0.05;
 
         //przypisanie liczb do TextView`ów
         oplaty.setText(d55+"zł");
