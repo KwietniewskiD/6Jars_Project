@@ -1,5 +1,6 @@
 package com.wsbwaw.szescsloikow;
 
+import android.content.Context;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
@@ -12,6 +13,11 @@ import android.content.SharedPreferences;
 
 public class MainActivity extends AppCompatActivity {
 
+    //utworzenie pliku zapisu
+    SharedPreferences malaBaza;
+
+
+
     //utworzenie skrótów do elementów interfejsu
     private EditText deposit;
     private TextView oplaty, przyjemnosci, inwestycje, edukacja, zakupy, datki;
@@ -20,17 +26,12 @@ public class MainActivity extends AppCompatActivity {
     //utowrzenie zmiennych pomocniczych
     private double d55, d10, d5, d;
 
+    //funckja która jest wywoływana przy starcie aplikacji
     @Override
-    //nie wiem od czego to jest ale było przy utworzeniu i niech będzie
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-    }
-
-    //nowa metoda
-    public void onClickButtonAdd(View view)
-    {
         //przypisanie skrótów
         deposit=(EditText)findViewById(R.id.deposit);
         oplaty=(TextView)findViewById(R.id.textValue1);
@@ -39,6 +40,52 @@ public class MainActivity extends AppCompatActivity {
         edukacja=(TextView)findViewById(R.id.textValue4);
         zakupy=(TextView)findViewById(R.id.textValue5);
         datki=(TextView)findViewById(R.id.textValue6);
+
+        malaBaza = getSharedPreferences("plikZapisu",
+                Context.MODE_PRIVATE);
+
+        //Pobranie zapisanych wartości
+        if (malaBaza.contains("Jar1"))
+        {
+            oplaty.setText(malaBaza.getFloat("jar1", 0.0F)+"zł");
+        }
+
+        if (malaBaza.contains("Jar2"))
+        {
+            przyjemnosci.setText(malaBaza.getFloat("jar2", 0.0F)+"zł");
+        }
+
+        if (malaBaza.contains("Jar3"))
+        {
+            inwestycje.setText(malaBaza.getFloat("jar3", 0.0F)+"zł");
+        }
+
+        if (malaBaza.contains("Jar4"))
+        {
+            edukacja.setText(malaBaza.getFloat("jar4", 0.0F)+"zł");
+        }
+
+        if (malaBaza.contains("Jar5"))
+        {
+            zakupy.setText(malaBaza.getFloat("jar5", 0.0F)+"zł");
+        }
+
+        if (malaBaza.contains("Jar6"))
+        {
+            datki.setText(malaBaza.getFloat("jar6", 0.0F)+"zł");
+        }
+
+
+
+
+
+
+    }
+
+    //nowa metoda
+    public void onClickButtonAdd(View view)
+    {
+
 
         //oplaty.setText(deposit.getText().toString()); przykład przypisania EditTextu do TextView
 
