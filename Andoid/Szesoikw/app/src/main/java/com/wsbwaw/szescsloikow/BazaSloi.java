@@ -4,17 +4,17 @@ import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-// TRZEBA TO WPISAC DO PLIKU ANDOIDMANIFEST.XML ALE JESZCZE NIE WIEM JAK
+
 //Klasa ma uproscic dostep do zapisu
 public class BazaSloi extends Application {
 
-    private SharedPreferences malaBaza;
+    private SharedPreferences bazaSloi;
 
     public BazaSloi() {
-        malaBaza = getSharedPreferences("plikZapisu", Context.MODE_PRIVATE);
+        bazaSloi = getSharedPreferences("plikZapisu", Context.MODE_PRIVATE);
     }
 
-    SharedPreferences.Editor editor = malaBaza.edit();
+    private SharedPreferences.Editor editor = bazaSloi.edit();
 
 
     public void zapiszFloat(String key, float value)
@@ -29,8 +29,19 @@ public class BazaSloi extends Application {
         editor.commit();
     }
 
-    public void pobierzFloat(String key, float value)
+    public boolean zawiera(String key)
     {
-        malaBaza.getFloat(key, 0.0F);
+        if(bazaSloi.contains(key))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    public float pobierzFloat(String key, float value) // 1. klucz 2. domyślna wartość jest nic nie będzie
+    {
+        return bazaSloi.getFloat(key, 0.0F);
     }
 }

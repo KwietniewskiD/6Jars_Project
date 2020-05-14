@@ -146,6 +146,13 @@
                 android:text="0" />
         </LinearLayout>
 
+        <Button
+            android:id="@+id/refresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="refresh"/>
+            android:text="Button" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
