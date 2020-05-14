@@ -150,14 +150,5 @@ public class MainActivity extends AppCompatActivity {
 
         //oplaty.setText(deposit.getText().toString()); przykład przypisania EditTextu do TextView
 
-
-
-        //przypisanie liczb do TextView`ów
-        oplaty.setText(d55+"zł");
-        przyjemnosci.setText(d10+"zł");
-        inwestycje.setText(d10+"zł");
-        edukacja.setText(d10+"zł");
-        zakupy.setText(d10+"zł");
-        datki.setText(d5+"zł");
     }
 }
