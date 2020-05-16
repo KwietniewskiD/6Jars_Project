@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    //nowa metoda
+    //nowa metoda dodawania
     public void onClickButtonAdd(View view)
     {
         //przypisanie skrótów
@@ -42,7 +42,210 @@ public class MainActivity extends AppCompatActivity {
 
         //oplaty.setText(deposit.getText().toString()); przykład przypisania EditTextu do TextView
 
-        d=Integer.parseInt(deposit.getText().toString()); //zmiana tekstu na liczbę
+        d=Double.parseDouble(deposit.getText().toString()); //zmiana tekstu na liczbę
+
+        d55=d*0.55;
+        d10=d*0.1;
+        d5=d*0.05;
+
+        //przypisanie liczb do TextView`ów
+        oplaty.setText(d55+"zł");
+        przyjemnosci.setText(d10+"zł");
+        inwestycje.setText(d10+"zł");
+        edukacja.setText(d10+"zł");
+        zakupy.setText(d10+"zł");
+        datki.setText(d5+"zł");
+    }
+
+    //nowa metoda odejmowania deposit
+    public void onClickButtonRem(View view)
+    {
+        //przypisanie skrótów
+        deposit=(EditText)findViewById(R.id.deposit);
+        oplaty=(TextView)findViewById(R.id.textValue1);
+        przyjemnosci=(TextView)findViewById(R.id.textValue2);
+        inwestycje=(TextView)findViewById(R.id.textValue3);
+        edukacja=(TextView)findViewById(R.id.textValue4);
+        zakupy=(TextView)findViewById(R.id.textValue5);
+        datki=(TextView)findViewById(R.id.textValue6);
+
+        //oplaty.setText(deposit.getText().toString()); przykład przypisania EditTextu do TextView
+
+        d=Double.parseDouble(deposit.getText().toString()); //zmiana tekstu na liczbę
+
+        d55=d*0.55;
+        d10=d*0.1;
+        d5=d*0.05;
+
+        //przypisanie liczb do TextView`ów
+        oplaty.setText(d55+"zł");
+        przyjemnosci.setText(d10+"zł");
+        inwestycje.setText(d10+"zł");
+        edukacja.setText(d10+"zł");
+        zakupy.setText(d10+"zł");
+        datki.setText(d5+"zł");
+    }
+
+    //nowa metoda odejmowania opłaty stałe
+    public void onClickButtonRemJar1(View view)
+    {
+        //przypisanie skrótów
+        deposit=(EditText)findViewById(R.id.deposit);
+        oplaty=(TextView)findViewById(R.id.textValue1);
+        przyjemnosci=(TextView)findViewById(R.id.textValue2);
+        inwestycje=(TextView)findViewById(R.id.textValue3);
+        edukacja=(TextView)findViewById(R.id.textValue4);
+        zakupy=(TextView)findViewById(R.id.textValue5);
+        datki=(TextView)findViewById(R.id.textValue6);
+
+        //oplaty.setText(deposit.getText().toString()); przykład przypisania EditTextu do TextView
+
+        d=Double.parseDouble(deposit.getText().toString()); //zmiana tekstu na liczbę
+
+        d55=d*0.55;
+        d10=d*0.1;
+        d5=d*0.05;
+
+        //przypisanie liczb do TextView`ów
+        oplaty.setText(d55+"zł");
+        przyjemnosci.setText(d10+"zł");
+        inwestycje.setText(d10+"zł");
+        edukacja.setText(d10+"zł");
+        zakupy.setText(d10+"zł");
+        datki.setText(d5+"zł");
+    }
+
+    //nowa metoda odejmowania przyjemności
+    public void onClickButtonRemJar2(View view)
+    {
+        //przypisanie skrótów
+        deposit=(EditText)findViewById(R.id.deposit);
+        oplaty=(TextView)findViewById(R.id.textValue1);
+        przyjemnosci=(TextView)findViewById(R.id.textValue2);
+        inwestycje=(TextView)findViewById(R.id.textValue3);
+        edukacja=(TextView)findViewById(R.id.textValue4);
+        zakupy=(TextView)findViewById(R.id.textValue5);
+        datki=(TextView)findViewById(R.id.textValue6);
+
+        //oplaty.setText(deposit.getText().toString()); przykład przypisania EditTextu do TextView
+
+        d=Double.parseDouble(deposit.getText().toString()); //zmiana tekstu na liczbę
+
+        d55=d*0.55;
+        d10=d*0.1;
+        d5=d*0.05;
+
+        //przypisanie liczb do TextView`ów
+        oplaty.setText(d55+"zł");
+        przyjemnosci.setText(d10+"zł");
+        inwestycje.setText(d10+"zł");
+        edukacja.setText(d10+"zł");
+        zakupy.setText(d10+"zł");
+        datki.setText(d5+"zł");
+    }
+
+    //nowa metoda odejmowania inwestycje
+    public void onClickButtonRemJar3(View view)
+    {
+        //przypisanie skrótów
+        deposit=(EditText)findViewById(R.id.deposit);
+        oplaty=(TextView)findViewById(R.id.textValue1);
+        przyjemnosci=(TextView)findViewById(R.id.textValue2);
+        inwestycje=(TextView)findViewById(R.id.textValue3);
+        edukacja=(TextView)findViewById(R.id.textValue4);
+        zakupy=(TextView)findViewById(R.id.textValue5);
+        datki=(TextView)findViewById(R.id.textValue6);
+
+        //oplaty.setText(deposit.getText().toString()); przykład przypisania EditTextu do TextView
+
+        d=Double.parseDouble(deposit.getText().toString()); //zmiana tekstu na liczbę
+
+        d55=d*0.55;
+        d10=d*0.1;
+        d5=d*0.05;
+
+        //przypisanie liczb do TextView`ów
+        oplaty.setText(d55+"zł");
+        przyjemnosci.setText(d10+"zł");
+        inwestycje.setText(d10+"zł");
+        edukacja.setText(d10+"zł");
+        zakupy.setText(d10+"zł");
+        datki.setText(d5+"zł");
+    }
+
+    //nowa metoda odejmowania edukacja
+    public void onClickButtonRemJar4(View view)
+    {
+        //przypisanie skrótów
+        deposit=(EditText)findViewById(R.id.deposit);
+        oplaty=(TextView)findViewById(R.id.textValue1);
+        przyjemnosci=(TextView)findViewById(R.id.textValue2);
+        inwestycje=(TextView)findViewById(R.id.textValue3);
+        edukacja=(TextView)findViewById(R.id.textValue4);
+        zakupy=(TextView)findViewById(R.id.textValue5);
+        datki=(TextView)findViewById(R.id.textValue6);
+
+        //oplaty.setText(deposit.getText().toString()); przykład przypisania EditTextu do TextView
+
+        d=Double.parseDouble(deposit.getText().toString()); //zmiana tekstu na liczbę
+
+        d55=d*0.55;
+        d10=d*0.1;
+        d5=d*0.05;
+
+        //przypisanie liczb do TextView`ów
+        oplaty.setText(d55+"zł");
+        przyjemnosci.setText(d10+"zł");
+        inwestycje.setText(d10+"zł");
+        edukacja.setText(d10+"zł");
+        zakupy.setText(d10+"zł");
+        datki.setText(d5+"zł");
+    }
+
+    //nowa metoda odejmowania większe zakupy
+    public void onClickButtonRemJar5(View view)
+    {
+        //przypisanie skrótów
+        deposit=(EditText)findViewById(R.id.deposit);
+        oplaty=(TextView)findViewById(R.id.textValue1);
+        przyjemnosci=(TextView)findViewById(R.id.textValue2);
+        inwestycje=(TextView)findViewById(R.id.textValue3);
+        edukacja=(TextView)findViewById(R.id.textValue4);
+        zakupy=(TextView)findViewById(R.id.textValue5);
+        datki=(TextView)findViewById(R.id.textValue6);
+
+        //oplaty.setText(deposit.getText().toString()); przykład przypisania EditTextu do TextView
+
+        d=Double.parseDouble(deposit.getText().toString()); //zmiana tekstu na liczbę
+
+        d55=d*0.55;
+        d10=d*0.1;
+        d5=d*0.05;
+
+        //przypisanie liczb do TextView`ów
+        oplaty.setText(d55+"zł");
+        przyjemnosci.setText(d10+"zł");
+        inwestycje.setText(d10+"zł");
+        edukacja.setText(d10+"zł");
+        zakupy.setText(d10+"zł");
+        datki.setText(d5+"zł");
+    }
+
+    //nowa metoda odejmowania datki
+    public void onClickButtonRemJar6(View view)
+    {
+        //przypisanie skrótów
+        deposit=(EditText)findViewById(R.id.deposit);
+        oplaty=(TextView)findViewById(R.id.textValue1);
+        przyjemnosci=(TextView)findViewById(R.id.textValue2);
+        inwestycje=(TextView)findViewById(R.id.textValue3);
+        edukacja=(TextView)findViewById(R.id.textValue4);
+        zakupy=(TextView)findViewById(R.id.textValue5);
+        datki=(TextView)findViewById(R.id.textValue6);
+
+        //oplaty.setText(deposit.getText().toString()); przykład przypisania EditTextu do TextView
+
+        d=Double.parseDouble(deposit.getText().toString()); //zmiana tekstu na liczbę
 
         d55=d*0.55;
         d10=d*0.1;
