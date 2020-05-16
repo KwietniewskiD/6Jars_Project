@@ -204,6 +204,28 @@
             android:text="@string/button_rem_Jar6"
             android:onClick="onClickButtonRemJar6"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
 
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:text="@string/przerwa" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="@string/clean" />
+
+        //button oszczędzanie od nowa
+        <Button
+            android:id="@+id/button_Clean"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_Clean"
+            android:onClick="onClickButtonClean"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
