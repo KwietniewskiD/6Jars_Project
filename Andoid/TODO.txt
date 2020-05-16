@@ -1,4 +1,3 @@
--Dodać zapisywanie kwot przypisanych do słoików
--Dodać możliwość odejmowania kwot ze słoików
-	-EditText, wybór z listy i Button
 -Zmienić pole wpisywania pensji na liczby z przecinkiem
+-Dodać powiadomienie przypominające o wpłacie
+-Dodać wybór języka pl/en
