@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         d=Double.parseDouble(deposit.getText().toString()); //zmiana tekstu na liczbę
         dJar1Value=Double.parseDouble(oplaty.getText().toString()); //zmiana tekstu z wartością opłat na liczbę
 
-        dJar1=dJar1Value-d;
+       dJar1=dJar1Value - d;
 
         //przypisanie liczb do TextView`ów
         oplaty.setText(dJar1+"zł");
