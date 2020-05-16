@@ -1,3 +1,4 @@
--Zmienić pole wpisywania pensji na liczby z przecinkiem
+-Zmienić pole wpisywania pensji na liczby z przecinkiem - zmieniłam
 -Dodać powiadomienie przypominające o wpłacie
 -Dodać wybór języka pl/en
+-Zmienić wypłaty na listę rozwijaną
