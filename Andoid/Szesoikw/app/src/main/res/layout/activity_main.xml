@@ -25,6 +25,7 @@
             android:inputType="number"
             android:text="@string/deposit" />
 
+        //button wpłaty
         <Button
             android:id="@+id/buttonAdd"
             android:layout_width="wrap_content"
@@ -32,56 +33,6 @@
             android:text="@string/button_add"
             android:onClick="onClickButtonAdd"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
 
-        <Button
-            android:id="@+id/buttonAdd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/button_add"
-            android:onClick="onClickButtonAdd"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
-
-        <Button
-            android:id="@+id/buttonAdd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/button_add"
-            android:onClick="onClickButtonAdd"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
-
-        <Button
-            android:id="@+id/buttonAdd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/button_add"
-            android:onClick="onClickButtonAdd"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
-
-        <Button
-            android:id="@+id/buttonAdd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/button_add"
-            android:onClick="onClickButtonAdd"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
-
-        <Button
-            android:id="@+id/buttonAdd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/button_add"
-            android:onClick="onClickButtonAdd"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
-
-        <Button
-            android:id="@+id/buttonAdd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/button_add"
-            android:onClick="onClickButtonAdd"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
-
-        <Button
-            android:id="@+id/buttonAdd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/button_add"
-            android:onClick="onClickButtonAdd"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
-
-        
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -106,6 +57,14 @@
             </LinearLayout>
         </LinearLayout>
 
+        //button wypłaty z opłat stałych
+        <Button
+            android:id="@+id/button_rem_Jar1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_rem_Jar1"
+            android:onClick="onClickButtonRemJar1"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -123,6 +82,14 @@
                 android:layout_height="wrap_content"
                 android:text="0" />
         </LinearLayout>
+
+        //button wypłaty z przyjemności
+        <Button
+            android:id="@+id/button_rem_Jar2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_rem_Jar2"
+            android:onClick="onClickButtonRemJar2"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -142,6 +109,14 @@
                 android:text="0" />
         </LinearLayout>
 
+        //button wypłaty z inwestycji
+        <Button
+            android:id="@+id/button_rem_Jar3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_rem_Jar3"
+            android:onClick="onClickButtonRemJar3"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -159,6 +134,14 @@
                 android:layout_height="wrap_content"
                 android:text="0" />
         </LinearLayout>
+
+        //button wypłaty z edukacji
+        <Button
+            android:id="@+id/button_rem_Jar4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_rem_Jar4"
+            android:onClick="onClickButtonRemJar4"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -178,6 +161,14 @@
                 android:text="0" />
         </LinearLayout>
 
+        //button wypłaty z większych zakupów
+        <Button
+            android:id="@+id/button_rem_Jar5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_rem_Jar5"
+            android:onClick="onClickButtonRemJar5"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -195,6 +186,15 @@
                 android:layout_height="wrap_content"
                 android:text="0" />
         </LinearLayout>
+
+        //button wypłaty z datków
+        <Button
+            android:id="@+id/button_rem_Jar6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_rem_Jar6"
+            android:onClick="onClickButtonRemJar6"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
