@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+
+
 public class MainActivity extends AppCompatActivity {
 
     //utworzenie skrótów do elementów interfejsu
@@ -21,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     private double Jar1, Jar2, Jar3, Jar4, Jar5, Jar6, d; // dotychczasowe wartości słoików
     private double dJar1, dJar2, dJar3, dJar4, dJar5, dJar6; // nowe wartości słoików
     private double wyplata1, wyplata2, wyplata3, wyplata4, wyplata5, wyplata6; // kwota wypłaty
+
+
 
     @Override
     //nie wiem od czego to jest ale było przy utworzeniu i niech będzie
@@ -68,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
     {
         wyplata1=Double.parseDouble(deposit.getText().toString()); //zmiana tekstu na liczbę
 
-        dJar1 = Jar1- wyplata1;
+        dJar1 = Jar1 - wyplata1;
 
         //przypisanie liczb do TextView`ów
         oplaty.setText(dJar1+"zł");
