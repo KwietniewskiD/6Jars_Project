@@ -27,7 +27,8 @@ public class MainActivity extends AppCompatActivity {
     private String y;
 
     //utowrzenie zmiennych pomocniczych
-    private float d55, d10, d5, d, x;
+    private float d55, d10, d5, d, x, wyplata;
+    private float z1, z2;
 
     //przywołanie bazy danych
 //    private SharedPreferences bazaDanych = getSharedPreferences("BazaSloikow", Activity.MODE_PRIVATE);
@@ -77,9 +78,7 @@ public class MainActivity extends AppCompatActivity {
         y= Float.toString(x)+"zł";
         datki.setText(y);
 
-
     }
-
 
     //metoda dodawania
     public void onClickButtonAdd(View view)
@@ -89,7 +88,6 @@ public class MainActivity extends AppCompatActivity {
 
         SharedPreferences bazaDanych = getSharedPreferences("BazaSloikow", Activity.MODE_PRIVATE);
         SharedPreferences.Editor editor = bazaDanych.edit();
-
 
         d=Float.parseFloat(deposit.getText().toString()); //zmiana tekstu na liczbę
 
@@ -125,45 +123,145 @@ public class MainActivity extends AppCompatActivity {
         editor.commit();
     }
 
-    //nowa metoda odejmowania deposit
-    public void onClickButtonRem(View view)
-    {
-
-    }
-
     //nowa metoda odejmowania opłaty stałe
     public void onClickButtonRemJar1(View view)
     {
+        SharedPreferences bazaDanych = getSharedPreferences("BazaSloikow", Activity.MODE_PRIVATE);
+        SharedPreferences.Editor editor = bazaDanych.edit();
 
+        wyplata=Float.parseFloat(deposit.getText().toString()); //zmiana tekstu na liczbę
+
+        //przypisanie liczb do TextView`ów + zapis do bazy
+        x=bazaDanych.getFloat("jar1", 0.0F)-wyplata;
+        oplaty.setText(x+"zł");
+        editor.putFloat("jar1", x);
+
+        editor.commit();
     }
 
     //nowa metoda odejmowania przyjemności
     public void onClickButtonRemJar2(View view)
     {
+        SharedPreferences bazaDanych = getSharedPreferences("BazaSloikow", Activity.MODE_PRIVATE);
+        SharedPreferences.Editor editor = bazaDanych.edit();
 
+        wyplata=Float.parseFloat(deposit.getText().toString()); //zmiana tekstu na liczbę
+
+        //przypisanie liczb do TextView`ów + zapis do bazy
+        x=bazaDanych.getFloat("jar2", 0.0F)-wyplata;
+        przyjemnosci.setText(x+"zł");
+        editor.putFloat("jar2", x);
+
+        editor.commit();
     }
 
     //nowa metoda odejmowania inwestycje
     public void onClickButtonRemJar3(View view)
     {
+        SharedPreferences bazaDanych = getSharedPreferences("BazaSloikow", Activity.MODE_PRIVATE);
+        SharedPreferences.Editor editor = bazaDanych.edit();
 
+        wyplata=Float.parseFloat(deposit.getText().toString()); //zmiana tekstu na liczbę
+
+        //przypisanie liczb do TextView`ów + zapis do bazy
+
+        x=bazaDanych.getFloat("jar3", 0.0F)-wyplata;
+        inwestycje.setText(x+"zł");
+        editor.putFloat("jar3", x);
+
+        editor.commit();
     }
 
     //nowa metoda odejmowania edukacja
     public void onClickButtonRemJar4(View view)
     {
+        SharedPreferences bazaDanych = getSharedPreferences("BazaSloikow", Activity.MODE_PRIVATE);
+        SharedPreferences.Editor editor = bazaDanych.edit();
 
+        wyplata=Float.parseFloat(deposit.getText().toString()); //zmiana tekstu na liczbę
+
+        //przypisanie liczb do TextView`ów + zapis do bazy
+        x=bazaDanych.getFloat("jar4", 0.0F)-wyplata;
+        edukacja.setText(x+"zł");
+        editor.putFloat("jar4", x);
+
+        editor.commit();
     }
 
     //nowa metoda odejmowania większe zakupy
     public void onClickButtonRemJar5(View view)
     {
+        SharedPreferences bazaDanych = getSharedPreferences("BazaSloikow", Activity.MODE_PRIVATE);
+        SharedPreferences.Editor editor = bazaDanych.edit();
 
+        wyplata=Float.parseFloat(deposit.getText().toString()); //zmiana tekstu na liczbę
+
+        //przypisanie liczb do TextView`ów + zapis do bazy
+        x=bazaDanych.getFloat("jar5", 0.0F)-wyplata;
+        zakupy.setText(x+"zł");
+        editor.putFloat("jar5", x);
+
+        editor.commit();
     }
 
     //nowa metoda odejmowania datki
     public void onClickButtonRemJar6(View view)
     {
+        SharedPreferences bazaDanych = getSharedPreferences("BazaSloikow", Activity.MODE_PRIVATE);
+        SharedPreferences.Editor editor = bazaDanych.edit();
 
+        wyplata=Float.parseFloat(deposit.getText().toString()); //zmiana tekstu na liczbę
+
+        //przypisanie liczb do TextView`ów + zapis do bazy
+        x=bazaDanych.getFloat("jar6", 0.0F)-wyplata;
+        datki.setText(x+"zł");
+        editor.putFloat("jar6", x);
+
+        editor.commit();
+    }
+
+    //nowa metoda oszczędzanie od nowa
+    public void onClickButtonClean(View view)
+    {
+        SharedPreferences bazaDanych = getSharedPreferences("BazaSloikow", Activity.MODE_PRIVATE);
+        SharedPreferences.Editor editor = bazaDanych.edit();
+
+        z1=bazaDanych.getFloat("jar1", 0.0F);
+        z2=bazaDanych.getFloat("jar1", 0.0F);
+        x=z1-z2;
+        oplaty.setText(x+"zł");
+        editor.putFloat("jar1", x);
+
+        z1=bazaDanych.getFloat("jar2", 0.0F);
+        z2=bazaDanych.getFloat("jar2", 0.0F);
+        x=z1-z2;
+        przyjemnosci.setText(x+"zł");
+        editor.putFloat("jar2", x);
+
+        z1=bazaDanych.getFloat("jar3", 0.0F);
+        z2=bazaDanych.getFloat("jar3", 0.0F);
+        x=z1-z2;
+        inwestycje.setText(x+"zł");
+        editor.putFloat("jar3", x);
+
+        z1=bazaDanych.getFloat("jar4", 0.0F);
+        z2=bazaDanych.getFloat("jar4", 0.0F);
+        x=z1-z2;
+        edukacja.setText(x+"zł");
+        editor.putFloat("jar4", x);
+
+        z1=bazaDanych.getFloat("jar5", 0.0F);
+        z2=bazaDanych.getFloat("jar5", 0.0F);
+        x=z1-z2;
+        zakupy.setText(x+"zł");
+        editor.putFloat("jar5", x);
+
+        z1=bazaDanych.getFloat("jar6", 0.0F);
+        z2=bazaDanych.getFloat("jar6", 0.0F);
+        x=z1-z2;
+        datki.setText(x+"zł");
+        editor.putFloat("jar6", x);
+
+        editor.commit();
     }
 }
