@@ -1,3 +1,4 @@
 -Zmienić pole wpisywania pensji na liczby z przecinkiem
 -Dodać powiadomienie przypominające o wpłacie
 -Dodać wybór języka pl/en
+-Dodać przycisk czyszczenia oszczędności "Oszczędzaj od nowa"
