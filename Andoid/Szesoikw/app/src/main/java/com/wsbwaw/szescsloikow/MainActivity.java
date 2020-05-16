@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
 
     //utowrzenie zmiennych pomocniczych
     private double d55, d10, d5, d;
+    private double dJar1, dJar2, dJar3, dJar4, dJar5, dJar6;
+    private double dJar1Value, dJar2Value, dJar3Value, dJar4Value, dJar5Value, dJar6Value; // dotychczasowe wartości słoików
 
     @Override
     //nie wiem od czego to jest ale było przy utworzeniu i niech będzie
@@ -57,62 +59,23 @@ public class MainActivity extends AppCompatActivity {
         datki.setText(d5+"zł");
     }
 
-    //nowa metoda odejmowania deposit
-    public void onClickButtonRem(View view)
-    {
-        //przypisanie skrótów
-        deposit=(EditText)findViewById(R.id.deposit);
-        oplaty=(TextView)findViewById(R.id.textValue1);
-        przyjemnosci=(TextView)findViewById(R.id.textValue2);
-        inwestycje=(TextView)findViewById(R.id.textValue3);
-        edukacja=(TextView)findViewById(R.id.textValue4);
-        zakupy=(TextView)findViewById(R.id.textValue5);
-        datki=(TextView)findViewById(R.id.textValue6);
-
-        //oplaty.setText(deposit.getText().toString()); przykład przypisania EditTextu do TextView
-
-        d=Double.parseDouble(deposit.getText().toString()); //zmiana tekstu na liczbę
-
-        d55=d*0.55;
-        d10=d*0.1;
-        d5=d*0.05;
-
-        //przypisanie liczb do TextView`ów
-        oplaty.setText(d55+"zł");
-        przyjemnosci.setText(d10+"zł");
-        inwestycje.setText(d10+"zł");
-        edukacja.setText(d10+"zł");
-        zakupy.setText(d10+"zł");
-        datki.setText(d5+"zł");
-    }
-
     //nowa metoda odejmowania opłaty stałe
     public void onClickButtonRemJar1(View view)
     {
         //przypisanie skrótów
         deposit=(EditText)findViewById(R.id.deposit);
         oplaty=(TextView)findViewById(R.id.textValue1);
-        przyjemnosci=(TextView)findViewById(R.id.textValue2);
-        inwestycje=(TextView)findViewById(R.id.textValue3);
-        edukacja=(TextView)findViewById(R.id.textValue4);
-        zakupy=(TextView)findViewById(R.id.textValue5);
-        datki=(TextView)findViewById(R.id.textValue6);
 
         //oplaty.setText(deposit.getText().toString()); przykład przypisania EditTextu do TextView
 
         d=Double.parseDouble(deposit.getText().toString()); //zmiana tekstu na liczbę
+        dJar1Value=Double.parseDouble(oplaty.getText().toString()); //zmiana tekstu z wartością opłat na liczbę
 
-        d55=d*0.55;
-        d10=d*0.1;
-        d5=d*0.05;
+        dJar1=dJar1Value-d;
 
         //przypisanie liczb do TextView`ów
-        oplaty.setText(d55+"zł");
-        przyjemnosci.setText(d10+"zł");
-        inwestycje.setText(d10+"zł");
-        edukacja.setText(d10+"zł");
-        zakupy.setText(d10+"zł");
-        datki.setText(d5+"zł");
+        oplaty.setText(dJar1+"zł");
+
     }
 
     //nowa metoda odejmowania przyjemności
@@ -120,28 +83,18 @@ public class MainActivity extends AppCompatActivity {
     {
         //przypisanie skrótów
         deposit=(EditText)findViewById(R.id.deposit);
-        oplaty=(TextView)findViewById(R.id.textValue1);
         przyjemnosci=(TextView)findViewById(R.id.textValue2);
-        inwestycje=(TextView)findViewById(R.id.textValue3);
-        edukacja=(TextView)findViewById(R.id.textValue4);
-        zakupy=(TextView)findViewById(R.id.textValue5);
-        datki=(TextView)findViewById(R.id.textValue6);
 
         //oplaty.setText(deposit.getText().toString()); przykład przypisania EditTextu do TextView
 
         d=Double.parseDouble(deposit.getText().toString()); //zmiana tekstu na liczbę
+        dJar2Value=Double.parseDouble(przyjemnosci.getText().toString()); //zmiana tekstu z wartością opłat na liczbę
 
-        d55=d*0.55;
-        d10=d*0.1;
-        d5=d*0.05;
+        dJar2=dJar2Value-d;
 
         //przypisanie liczb do TextView`ów
-        oplaty.setText(d55+"zł");
-        przyjemnosci.setText(d10+"zł");
-        inwestycje.setText(d10+"zł");
-        edukacja.setText(d10+"zł");
-        zakupy.setText(d10+"zł");
-        datki.setText(d5+"zł");
+        przyjemnosci.setText(dJar2+"zł");
+
     }
 
     //nowa metoda odejmowania inwestycje
@@ -149,28 +102,18 @@ public class MainActivity extends AppCompatActivity {
     {
         //przypisanie skrótów
         deposit=(EditText)findViewById(R.id.deposit);
-        oplaty=(TextView)findViewById(R.id.textValue1);
-        przyjemnosci=(TextView)findViewById(R.id.textValue2);
         inwestycje=(TextView)findViewById(R.id.textValue3);
-        edukacja=(TextView)findViewById(R.id.textValue4);
-        zakupy=(TextView)findViewById(R.id.textValue5);
-        datki=(TextView)findViewById(R.id.textValue6);
 
         //oplaty.setText(deposit.getText().toString()); przykład przypisania EditTextu do TextView
 
         d=Double.parseDouble(deposit.getText().toString()); //zmiana tekstu na liczbę
+        dJar3Value=Double.parseDouble(inwestycje.getText().toString()); //zmiana tekstu z wartością opłat na liczbę
 
-        d55=d*0.55;
-        d10=d*0.1;
-        d5=d*0.05;
+        dJar3=dJar3Value-d;
 
         //przypisanie liczb do TextView`ów
-        oplaty.setText(d55+"zł");
-        przyjemnosci.setText(d10+"zł");
-        inwestycje.setText(d10+"zł");
-        edukacja.setText(d10+"zł");
-        zakupy.setText(d10+"zł");
-        datki.setText(d5+"zł");
+        inwestycje.setText(dJar3+"zł");
+
     }
 
     //nowa metoda odejmowania edukacja
@@ -178,28 +121,18 @@ public class MainActivity extends AppCompatActivity {
     {
         //przypisanie skrótów
         deposit=(EditText)findViewById(R.id.deposit);
-        oplaty=(TextView)findViewById(R.id.textValue1);
-        przyjemnosci=(TextView)findViewById(R.id.textValue2);
-        inwestycje=(TextView)findViewById(R.id.textValue3);
         edukacja=(TextView)findViewById(R.id.textValue4);
-        zakupy=(TextView)findViewById(R.id.textValue5);
-        datki=(TextView)findViewById(R.id.textValue6);
 
         //oplaty.setText(deposit.getText().toString()); przykład przypisania EditTextu do TextView
 
         d=Double.parseDouble(deposit.getText().toString()); //zmiana tekstu na liczbę
+        dJar4Value=Double.parseDouble(edukacja.getText().toString()); //zmiana tekstu z wartością opłat na liczbę
 
-        d55=d*0.55;
-        d10=d*0.1;
-        d5=d*0.05;
+        dJar4=dJar4Value-d;
 
         //przypisanie liczb do TextView`ów
-        oplaty.setText(d55+"zł");
-        przyjemnosci.setText(d10+"zł");
-        inwestycje.setText(d10+"zł");
-        edukacja.setText(d10+"zł");
-        zakupy.setText(d10+"zł");
-        datki.setText(d5+"zł");
+        edukacja.setText(dJar4+"zł");
+
     }
 
     //nowa metoda odejmowania większe zakupy
@@ -207,28 +140,19 @@ public class MainActivity extends AppCompatActivity {
     {
         //przypisanie skrótów
         deposit=(EditText)findViewById(R.id.deposit);
-        oplaty=(TextView)findViewById(R.id.textValue1);
-        przyjemnosci=(TextView)findViewById(R.id.textValue2);
-        inwestycje=(TextView)findViewById(R.id.textValue3);
-        edukacja=(TextView)findViewById(R.id.textValue4);
         zakupy=(TextView)findViewById(R.id.textValue5);
-        datki=(TextView)findViewById(R.id.textValue6);
+
 
         //oplaty.setText(deposit.getText().toString()); przykład przypisania EditTextu do TextView
 
         d=Double.parseDouble(deposit.getText().toString()); //zmiana tekstu na liczbę
+        dJar5Value=Double.parseDouble(zakupy.getText().toString()); //zmiana tekstu z wartością opłat na liczbę
 
-        d55=d*0.55;
-        d10=d*0.1;
-        d5=d*0.05;
+        dJar5=dJar5Value-d;
 
         //przypisanie liczb do TextView`ów
-        oplaty.setText(d55+"zł");
-        przyjemnosci.setText(d10+"zł");
-        inwestycje.setText(d10+"zł");
-        edukacja.setText(d10+"zł");
-        zakupy.setText(d10+"zł");
-        datki.setText(d5+"zł");
+        zakupy.setText(dJar5+"zł");
+
     }
 
     //nowa metoda odejmowania datki
@@ -236,27 +160,16 @@ public class MainActivity extends AppCompatActivity {
     {
         //przypisanie skrótów
         deposit=(EditText)findViewById(R.id.deposit);
-        oplaty=(TextView)findViewById(R.id.textValue1);
-        przyjemnosci=(TextView)findViewById(R.id.textValue2);
-        inwestycje=(TextView)findViewById(R.id.textValue3);
-        edukacja=(TextView)findViewById(R.id.textValue4);
-        zakupy=(TextView)findViewById(R.id.textValue5);
         datki=(TextView)findViewById(R.id.textValue6);
 
         //oplaty.setText(deposit.getText().toString()); przykład przypisania EditTextu do TextView
 
         d=Double.parseDouble(deposit.getText().toString()); //zmiana tekstu na liczbę
+        dJar6Value=Double.parseDouble(datki.getText().toString()); //zmiana tekstu z wartością opłat na liczbę
 
-        d55=d*0.55;
-        d10=d*0.1;
-        d5=d*0.05;
+        dJar6=dJar6Value-d;
 
         //przypisanie liczb do TextView`ów
-        oplaty.setText(d55+"zł");
-        przyjemnosci.setText(d10+"zł");
-        inwestycje.setText(d10+"zł");
-        edukacja.setText(d10+"zł");
-        zakupy.setText(d10+"zł");
-        datki.setText(d5+"zł");
+        datki.setText(dJar6+"zł");
     }
 }
