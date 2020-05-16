@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     //utworzenie skrótów do elementów interfejsu
     private EditText deposit;
     private TextView oplaty;
+    private TextView przyjemnosci;
     private TextView inwestycje;
     private TextView edukacja;
     private TextView zakupy;
@@ -29,8 +30,8 @@ public class MainActivity extends AppCompatActivity {
     private float d55, d10, d5, d, x;
 
     //przywołanie bazy danych
-    private SharedPreferences bazaDanych = getSharedPreferences("BazaSloikow", Activity.MODE_PRIVATE);
-    private SharedPreferences.Editor editor = bazaDanych.edit();
+//    private SharedPreferences bazaDanych = getSharedPreferences("BazaSloikow", Activity.MODE_PRIVATE);
+//    private SharedPreferences.Editor editor = bazaDanych.edit();
 
 
     @Override
@@ -39,10 +40,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        SharedPreferences bazaDanych = getSharedPreferences("BazaSloikow", Activity.MODE_PRIVATE);
+        SharedPreferences.Editor editor = bazaDanych.edit();
+
         //przypisanie skrótów
         deposit=(EditText)findViewById(R.id.deposit);
         oplaty=(TextView)findViewById(R.id.textValue1);
-        TextView przyjemnosci = (TextView) findViewById(R.id.textValue2);
+        przyjemnosci = (TextView) findViewById(R.id.textValue2);
         inwestycje=(TextView)findViewById(R.id.textValue3);
         edukacja=(TextView)findViewById(R.id.textValue4);
         zakupy=(TextView)findViewById(R.id.textValue5);
@@ -83,6 +87,10 @@ public class MainActivity extends AppCompatActivity {
 
         //oplaty.setText(deposit.getText().toString()); przykład przypisania EditTextu do TextView
 
+        SharedPreferences bazaDanych = getSharedPreferences("BazaSloikow", Activity.MODE_PRIVATE);
+        SharedPreferences.Editor editor = bazaDanych.edit();
+
+
         d=Float.parseFloat(deposit.getText().toString()); //zmiana tekstu na liczbę
 
         d55=d*0.55F;
@@ -94,24 +102,24 @@ public class MainActivity extends AppCompatActivity {
         oplaty.setText(x+"zł");
         editor.putFloat("jar1", x);
 
-        x=bazaDanych.getFloat("jar2", 0.0F)+d55;
-        oplaty.setText(x+"zł");
+        x=bazaDanych.getFloat("jar2", 0.0F)+d10;
+        przyjemnosci.setText(x+"zł");
         editor.putFloat("jar2", x);
 
-        x=bazaDanych.getFloat("jar3", 0.0F)+d55;
-        oplaty.setText(x+"zł");
+        x=bazaDanych.getFloat("jar3", 0.0F)+d10;
+        inwestycje.setText(x+"zł");
         editor.putFloat("jar3", x);
 
-        x=bazaDanych.getFloat("jar4", 0.0F)+d55;
-        oplaty.setText(x+"zł");
+        x=bazaDanych.getFloat("jar4", 0.0F)+d10;
+        edukacja.setText(x+"zł");
         editor.putFloat("jar4", x);
 
-        x=bazaDanych.getFloat("jar5", 0.0F)+d55;
-        oplaty.setText(x+"zł");
+        x=bazaDanych.getFloat("jar5", 0.0F)+d10;
+        zakupy.setText(x+"zł");
         editor.putFloat("jar5", x);
 
-        x=bazaDanych.getFloat("jar6", 0.0F)+d55;
-        oplaty.setText(x+"zł");
+        x=bazaDanych.getFloat("jar6", 0.0F)+d5;
+        datki.setText(x+"zł");
         editor.putFloat("jar6", x);
 
         editor.commit();
