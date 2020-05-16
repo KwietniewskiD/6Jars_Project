@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     //utowrzenie zmiennych pomocniczych
     private float d55, d10, d5, d, x, wyplata;
+    private float z1, z2;
 
     //przywołanie bazy danych
 //    private SharedPreferences bazaDanych = getSharedPreferences("BazaSloikow", Activity.MODE_PRIVATE);
@@ -87,7 +88,6 @@ public class MainActivity extends AppCompatActivity {
 
         SharedPreferences bazaDanych = getSharedPreferences("BazaSloikow", Activity.MODE_PRIVATE);
         SharedPreferences.Editor editor = bazaDanych.edit();
-
 
         d=Float.parseFloat(deposit.getText().toString()); //zmiana tekstu na liczbę
 
@@ -214,6 +214,51 @@ public class MainActivity extends AppCompatActivity {
 
         //przypisanie liczb do TextView`ów + zapis do bazy
         x=bazaDanych.getFloat("jar6", 0.0F)-wyplata;
+        datki.setText(x+"zł");
+        editor.putFloat("jar6", x);
+
+        editor.commit();
+    }
+
+    //nowa metoda oszczędzanie od nowa
+    public void onClickButtonClean(View view)
+    {
+        SharedPreferences bazaDanych = getSharedPreferences("BazaSloikow", Activity.MODE_PRIVATE);
+        SharedPreferences.Editor editor = bazaDanych.edit();
+
+        z1=bazaDanych.getFloat("jar1", 0.0F);
+        z2=bazaDanych.getFloat("jar1", 0.0F);
+        x=z1-z2;
+        oplaty.setText(x+"zł");
+        editor.putFloat("jar1", x);
+
+        z1=bazaDanych.getFloat("jar2", 0.0F);
+        z2=bazaDanych.getFloat("jar2", 0.0F);
+        x=z1-z2;
+        przyjemnosci.setText(x+"zł");
+        editor.putFloat("jar2", x);
+
+        z1=bazaDanych.getFloat("jar3", 0.0F);
+        z2=bazaDanych.getFloat("jar3", 0.0F);
+        x=z1-z2;
+        inwestycje.setText(x+"zł");
+        editor.putFloat("jar3", x);
+
+        z1=bazaDanych.getFloat("jar4", 0.0F);
+        z2=bazaDanych.getFloat("jar4", 0.0F);
+        x=z1-z2;
+        edukacja.setText(x+"zł");
+        editor.putFloat("jar4", x);
+
+        z1=bazaDanych.getFloat("jar5", 0.0F);
+        z2=bazaDanych.getFloat("jar5", 0.0F);
+        x=z1-z2;
+        zakupy.setText(x+"zł");
+        editor.putFloat("jar5", x);
+
+        z1=bazaDanych.getFloat("jar6", 0.0F);
+        z2=bazaDanych.getFloat("jar6", 0.0F);
+        x=z1-z2;
         datki.setText(x+"zł");
         editor.putFloat("jar6", x);
 
