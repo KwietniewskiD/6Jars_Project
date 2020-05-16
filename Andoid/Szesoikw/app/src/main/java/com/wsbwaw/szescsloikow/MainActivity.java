@@ -1,7 +1,10 @@
 package com.wsbwaw.szescsloikow;
 
+import android.app.Notification;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.app.Activity;
@@ -9,14 +12,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.content.SharedPreferences;
 
 public class MainActivity extends AppCompatActivity {
-
-    //utworzenie pliku zapisu
-    SharedPreferences malaBaza;
-
-
 
     //utworzenie skrótów do elementów interfejsu
     private EditText deposit;
@@ -24,10 +21,15 @@ public class MainActivity extends AppCompatActivity {
     private Button pobierz;
 
     //utowrzenie zmiennych pomocniczych
-    private float d55, d10, d5, d;
+    private float d55, d10, d5, d, x;
 
-    //funckja która jest wywoływana przy starcie aplikacji
+    //przywołanie bazy danych
+    private SharedPreferences bazaDanych = getSharedPreferences("BazaSloikow", Activity.MODE_PRIVATE);
+    private SharedPreferences.Editor editor = bazaDanych.edit();
+
+
     @Override
+    //nie wiem od czego to jest ale było przy utworzeniu i niech będzie
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -41,50 +43,23 @@ public class MainActivity extends AppCompatActivity {
         zakupy=(TextView)findViewById(R.id.textValue5);
         datki=(TextView)findViewById(R.id.textValue6);
 
-        malaBaza = getSharedPreferences("plikZapisu", Context.MODE_PRIVATE);
-
-        //Pobranie zapisanych wartości
-        if (malaBaza.contains("Jar1"))
-        {
-            oplaty.setText(malaBaza.getFloat("jar1", 0.0F)+"zł");
-        }
-
-        if (malaBaza.contains("Jar2"))
-        {
-            przyjemnosci.setText(malaBaza.getFloat("jar2", 0.0F)+"zł");
-        }
-
-        if (malaBaza.contains("Jar3"))
-        {
-            inwestycje.setText(malaBaza.getFloat("jar3", 0.0F)+"zł");
-        }
-
-        if (malaBaza.contains("Jar4"))
-        {
-            edukacja.setText(malaBaza.getFloat("jar4", 0.0F)+"zł");
-        }
-
-        if (malaBaza.contains("Jar5"))
-        {
-            zakupy.setText(malaBaza.getFloat("jar5", 0.0F)+"zł");
-        }
-
-        if (malaBaza.contains("Jar6"))
-        {
-            datki.setText(malaBaza.getFloat("jar6", 0.0F)+"zł");
-        }
-
-
-
-
+        //pobranie zapisanych wartości lub jeśli takich brak to 0.0zł (oznaczone jako warning ale wszystko jest dobrze)
+        oplaty.setText(bazaDanych.getFloat("jar1", 0.0F)+"zł");
+        przyjemnosci.setText(bazaDanych.getFloat("jar2", 0.0F)+"zł");
+        inwestycje.setText(bazaDanych.getFloat("jar3", 0.0F)+"zł");
+        edukacja.setText(bazaDanych.getFloat("jar4", 0.0F)+"zł");
+        zakupy.setText(bazaDanych.getFloat("jar5", 0.0F)+"zł");
+        datki.setText(bazaDanych.getFloat("jar6", 0.0F)+"zł");
 
 
     }
 
-    //nowa metoda
+
+    //metoda dodawania
     public void onClickButtonAdd(View view)
     {
-        SharedPreferences.Editor editor = malaBaza.edit();
+
+        //oplaty.setText(deposit.getText().toString()); przykład przypisania EditTextu do TextView
 
         d=Float.parseFloat(deposit.getText().toString()); //zmiana tekstu na liczbę
 
@@ -92,63 +67,73 @@ public class MainActivity extends AppCompatActivity {
         d10=d*0.1F;
         d5=d*0.05F;
 
-        if (malaBaza.contains("Jar1"))
-        {
-            oplaty.setText(malaBaza.getFloat("jar1", 0.0F)+d55+"zł");
-        }
-        else
-        {
-            oplaty.setText(d55+"zł");
-            //zapiszdobazy
-        }
+        //przypisanie liczb do TextView`ów + zapis do bazy
+        x=bazaDanych.getFloat("jar1", 0.0F)+d55;
+        oplaty.setText(x+"zł");
+        editor.putFloat("jar1", x);
 
-        if (malaBaza.contains("Jar2"))
-        {
-            przyjemnosci.setText(malaBaza.getFloat("jar2", 0.0F)+d10+"zł");
-        }
-        else
-        {
-            przyjemnosci.setText(d10+"zł");
-        }
+        x=bazaDanych.getFloat("jar2", 0.0F)+d55;
+        oplaty.setText(x+"zł");
+        editor.putFloat("jar2", x);
 
-        if (malaBaza.contains("Jar3"))
-        {
-            inwestycje.setText(malaBaza.getFloat("jar3", 0.0F)+d10+"zł");
-        }
-        else
-        {
-            inwestycje.setText(d10+"zł");
-        }
+        x=bazaDanych.getFloat("jar3", 0.0F)+d55;
+        oplaty.setText(x+"zł");
+        editor.putFloat("jar3", x);
 
-        if (malaBaza.contains("Jar4"))
-        {
-            edukacja.setText(malaBaza.getFloat("jar4", 0.0F)+d10+"zł");
-        }
-        else
-        {
-            edukacja.setText(d10+"zł");
-        }
+        x=bazaDanych.getFloat("jar4", 0.0F)+d55;
+        oplaty.setText(x+"zł");
+        editor.putFloat("jar4", x);
 
-        if (malaBaza.contains("Jar5"))
-        {
-            zakupy.setText(malaBaza.getFloat("jar5", 0.0F)+d10+"zł");
-        }
-        else
-        {
-            zakupy.setText(d10+"zł");
-        }
+        x=bazaDanych.getFloat("jar5", 0.0F)+d55;
+        oplaty.setText(x+"zł");
+        editor.putFloat("jar5", x);
 
+        x=bazaDanych.getFloat("jar6", 0.0F)+d55;
+        oplaty.setText(x+"zł");
+        editor.putFloat("jar6", x);
 
-        if (malaBaza.contains("Jar6"))
-        {
-            datki.setText(malaBaza.getFloat("jar6", 0.0F)+d5+"zł");
-        }
-        else
-        {
-            datki.setText(d5+"zł");
-        }
+        editor.commit();
+    }
 
-        //oplaty.setText(deposit.getText().toString()); przykład przypisania EditTextu do TextView
+    //nowa metoda odejmowania deposit
+    public void onClickButtonRem(View view)
+    {
+
+    }
+
+    //nowa metoda odejmowania opłaty stałe
+    public void onClickButtonRemJar1(View view)
+    {
+
+    }
+
+    //nowa metoda odejmowania przyjemności
+    public void onClickButtonRemJar2(View view)
+    {
+
+    }
+
+    //nowa metoda odejmowania inwestycje
+    public void onClickButtonRemJar3(View view)
+    {
+
+    }
+
+    //nowa metoda odejmowania edukacja
+    public void onClickButtonRemJar4(View view)
+    {
+
+    }
+
+    //nowa metoda odejmowania większe zakupy
+    public void onClickButtonRemJar5(View view)
+    {
+
+    }
+
+    //nowa metoda odejmowania datki
+    public void onClickButtonRemJar6(View view)
+    {
 
     }
 }

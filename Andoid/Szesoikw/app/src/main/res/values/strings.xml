@@ -1,6 +1,12 @@
 <resources>
     <string name="app_name">Sześć słoików</string>
     <string name="button_add">Wpłać</string>
+    <string name="button_rem_Jar1">Wypłać</string>
+    <string name="button_rem_Jar2">Wypłać</string>
+    <string name="button_rem_Jar3">Wypłać</string>
+    <string name="button_rem_Jar4">Wypłać</string>
+    <string name="button_rem_Jar5">Wypłać</string>
+    <string name="button_rem_Jar6">Wypłać</string>
     <string name="deposit">Ile wpłacasz</string>
     <string name="textJar1">Opłaty stałe-</string>
     <string name="textJar2">Przyjemności-</string>
