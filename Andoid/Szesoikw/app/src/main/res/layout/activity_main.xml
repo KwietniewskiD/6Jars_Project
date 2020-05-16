@@ -32,6 +32,56 @@
             android:text="@string/button_add"
             android:onClick="onClickButtonAdd"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
 
+        <Button
+            android:id="@+id/buttonAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_add"
+            android:onClick="onClickButtonAdd"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
+
+        <Button
+            android:id="@+id/buttonAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_add"
+            android:onClick="onClickButtonAdd"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
+
+        <Button
+            android:id="@+id/buttonAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_add"
+            android:onClick="onClickButtonAdd"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
+
+        <Button
+            android:id="@+id/buttonAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_add"
+            android:onClick="onClickButtonAdd"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
+
+        <Button
+            android:id="@+id/buttonAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_add"
+            android:onClick="onClickButtonAdd"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
+
+        <Button
+            android:id="@+id/buttonAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_add"
+            android:onClick="onClickButtonAdd"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
+
+        <Button
+            android:id="@+id/buttonAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_add"
+            android:onClick="onClickButtonAdd"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
+
+        
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
