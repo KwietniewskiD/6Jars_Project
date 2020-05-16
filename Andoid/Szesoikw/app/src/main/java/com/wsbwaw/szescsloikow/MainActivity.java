@@ -17,8 +17,13 @@ public class MainActivity extends AppCompatActivity {
 
     //utworzenie skrótów do elementów interfejsu
     private EditText deposit;
-    private TextView oplaty, przyjemnosci, inwestycje, edukacja, zakupy, datki;
+    private TextView oplaty;
+    private TextView inwestycje;
+    private TextView edukacja;
+    private TextView zakupy;
+    private TextView datki;
     private Button pobierz;
+    private String y;
 
     //utowrzenie zmiennych pomocniczych
     private float d55, d10, d5, d, x;
@@ -37,19 +42,36 @@ public class MainActivity extends AppCompatActivity {
         //przypisanie skrótów
         deposit=(EditText)findViewById(R.id.deposit);
         oplaty=(TextView)findViewById(R.id.textValue1);
-        przyjemnosci=(TextView)findViewById(R.id.textValue2);
+        TextView przyjemnosci = (TextView) findViewById(R.id.textValue2);
         inwestycje=(TextView)findViewById(R.id.textValue3);
         edukacja=(TextView)findViewById(R.id.textValue4);
         zakupy=(TextView)findViewById(R.id.textValue5);
         datki=(TextView)findViewById(R.id.textValue6);
 
         //pobranie zapisanych wartości lub jeśli takich brak to 0.0zł (oznaczone jako warning ale wszystko jest dobrze)
-        oplaty.setText(bazaDanych.getFloat("jar1", 0.0F)+"zł");
-        przyjemnosci.setText(bazaDanych.getFloat("jar2", 0.0F)+"zł");
-        inwestycje.setText(bazaDanych.getFloat("jar3", 0.0F)+"zł");
-        edukacja.setText(bazaDanych.getFloat("jar4", 0.0F)+"zł");
-        zakupy.setText(bazaDanych.getFloat("jar5", 0.0F)+"zł");
-        datki.setText(bazaDanych.getFloat("jar6", 0.0F)+"zł");
+        x=bazaDanych.getFloat("jar1", 0.0F);
+        y= Float.toString(x)+"zł";
+        oplaty.setText(y);
+
+        x=bazaDanych.getFloat("jar2", 0.0F);
+        y= Float.toString(x)+"zł";
+        przyjemnosci.setText(y);
+
+        x=bazaDanych.getFloat("jar3", 0.0F);
+        y= Float.toString(x)+"zł";
+        inwestycje.setText(y);
+
+        x=bazaDanych.getFloat("jar4", 0.0F);
+        y= Float.toString(x)+"zł";
+        edukacja.setText(y);
+
+        x=bazaDanych.getFloat("jar5", 0.0F);
+        y= Float.toString(x)+"zł";
+        zakupy.setText(y);
+
+        x=bazaDanych.getFloat("jar6", 0.0F);
+        y= Float.toString(x)+"zł";
+        datki.setText(y);
 
 
     }
