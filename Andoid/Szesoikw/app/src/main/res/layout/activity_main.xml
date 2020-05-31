@@ -39,7 +39,7 @@
             android:id="@+id/buttonAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#800080"
+            android:textColor="#E91E63"
             android:background="#E5E4E2"
             android:text="@string/button_add"
             android:onClick="onClickButtonAdd"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
@@ -232,7 +232,7 @@
             android:id="@+id/button_Clean"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#F88017"
+            android:textColor="#9C27B0"
             android:background="#E5E4E2"
             android:text="@string/button_Clean"
             android:onClick="onClickButtonClean"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
