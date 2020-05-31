@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#98AFC7"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -38,6 +39,8 @@
             android:id="@+id/buttonAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#800080"
+            android:background="#E5E4E2"
             android:text="@string/button_add"
             android:onClick="onClickButtonAdd"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
 
@@ -70,6 +73,7 @@
             android:id="@+id/button_rem_Jar1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#E5E4E2"
             android:text="@string/button_rem_Jar1"
             android:onClick="onClickButtonRemJar1"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
 
@@ -97,6 +101,7 @@
             android:id="@+id/button_rem_Jar2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#E5E4E2"
             android:text="@string/button_rem_Jar2"
             android:onClick="onClickButtonRemJar2"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
 
@@ -123,6 +128,7 @@
             android:id="@+id/button_rem_Jar3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#E5E4E2"
             android:text="@string/button_rem_Jar3"
             android:onClick="onClickButtonRemJar3"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
 
@@ -149,6 +155,7 @@
             android:id="@+id/button_rem_Jar4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#E5E4E2"
             android:text="@string/button_rem_Jar4"
             android:onClick="onClickButtonRemJar4"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
 
@@ -175,6 +182,7 @@
             android:id="@+id/button_rem_Jar5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#E5E4E2"
             android:text="@string/button_rem_Jar5"
             android:onClick="onClickButtonRemJar5"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
 
@@ -201,6 +209,7 @@
             android:id="@+id/button_rem_Jar6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#E5E4E2"
             android:text="@string/button_rem_Jar6"
             android:onClick="onClickButtonRemJar6"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
 
@@ -223,6 +232,8 @@
             android:id="@+id/button_Clean"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#F88017"
+            android:background="#E5E4E2"
             android:text="@string/button_Clean"
             android:onClick="onClickButtonClean"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
 
