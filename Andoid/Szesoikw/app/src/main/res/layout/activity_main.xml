@@ -23,7 +23,7 @@
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
+            style="@style/Napisy.1"
             android:text="@string/deposit" />
 
         <EditText
@@ -39,8 +39,7 @@
             android:id="@+id/buttonAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#E91E63"
-            android:background="#E5E4E2"
+            style="@style/ButtonStyle.Add"
             android:text="@string/button_add"
             android:onClick="onClickButtonAdd"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
 
@@ -58,12 +57,14 @@
                     android:id="@+id/textView1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/Napisy.2"
                     android:text="@string/textJar1" />
 
                 <TextView
                     android:id="@+id/textValue1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/Napisy.2"
                     android:text="0" />
             </LinearLayout>
         </LinearLayout>
@@ -73,7 +74,7 @@
             android:id="@+id/button_rem_Jar1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#E5E4E2"
+            style="@style/ButtonStyle.Rem"
             android:text="@string/button_rem_Jar1"
             android:onClick="onClickButtonRemJar1"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
 
@@ -86,12 +87,14 @@
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                style="@style/Napisy.2"
                 android:text="@string/textJar2" />
 
             <TextView
                 android:id="@+id/textValue2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                style="@style/Napisy.2"
                 android:text="0" />
 
         </LinearLayout>
@@ -101,7 +104,7 @@
             android:id="@+id/button_rem_Jar2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#E5E4E2"
+            style="@style/ButtonStyle.Rem"
             android:text="@string/button_rem_Jar2"
             android:onClick="onClickButtonRemJar2"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
 
@@ -114,12 +117,14 @@
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                style="@style/Napisy.2"
                 android:text="@string/textJar3" />
 
             <TextView
                 android:id="@+id/textValue3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                style="@style/Napisy.2"
                 android:text="0" />
         </LinearLayout>
 
@@ -128,7 +133,7 @@
             android:id="@+id/button_rem_Jar3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#E5E4E2"
+            style="@style/ButtonStyle.Rem"
             android:text="@string/button_rem_Jar3"
             android:onClick="onClickButtonRemJar3"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
 
@@ -141,12 +146,14 @@
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                style="@style/Napisy.2"
                 android:text="@string/textJar4" />
 
             <TextView
                 android:id="@+id/textValue4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                style="@style/Napisy.2"
                 android:text="0" />
         </LinearLayout>
 
@@ -155,7 +162,7 @@
             android:id="@+id/button_rem_Jar4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#E5E4E2"
+            style="@style/ButtonStyle.Rem"
             android:text="@string/button_rem_Jar4"
             android:onClick="onClickButtonRemJar4"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
 
@@ -168,12 +175,14 @@
                 android:id="@+id/textView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                style="@style/Napisy.2"
                 android:text="@string/textJar5" />
 
             <TextView
                 android:id="@+id/textValue5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                style="@style/Napisy.2"
                 android:text="0" />
         </LinearLayout>
 
@@ -182,7 +191,7 @@
             android:id="@+id/button_rem_Jar5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#E5E4E2"
+            style="@style/ButtonStyle.Rem"
             android:text="@string/button_rem_Jar5"
             android:onClick="onClickButtonRemJar5"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
 
@@ -195,12 +204,14 @@
                 android:id="@+id/textView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                style="@style/Napisy.2"
                 android:text="@string/textJar6" />
 
             <TextView
                 android:id="@+id/textValue6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                style="@style/Napisy.2"
                 android:text="0" />
         </LinearLayout>
 
@@ -209,7 +220,7 @@
             android:id="@+id/button_rem_Jar6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#E5E4E2"
+            style="@style/ButtonStyle.Rem"
             android:text="@string/button_rem_Jar6"
             android:onClick="onClickButtonRemJar6"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
 
@@ -224,10 +235,7 @@
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="15dp"
-            android:textColor="#9C27B0"
-            android:typeface="serif"
-            android:textStyle="bold"
+            style="@style/Napisy.3"
             android:text="@string/clean" />
 
         //button oszczędzanie od nowa
@@ -235,10 +243,7 @@
             android:id="@+id/button_Clean"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#9C27B0"
-            android:background="#E5E4E2"
-            android:typeface="serif"
-            android:textStyle="bold"
+            style="@style/ButtonStyle.Clean"
             android:text="@string/button_Clean"
             android:onClick="onClickButtonClean"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
 
