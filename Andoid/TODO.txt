@@ -2,3 +2,4 @@
 -Dodać powiadomienie przypominające o wpłacie
 -Dodać wybór języka pl/en
 -Zmienić wypłaty na listę rozwijaną
+-Dodać możliwość zmiany koloru tła i koloru tesktu
