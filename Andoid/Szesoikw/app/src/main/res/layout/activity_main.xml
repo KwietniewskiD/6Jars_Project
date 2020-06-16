@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00A891"
+    android:background="#CCCFCF"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="412dp"
         android:layout_height="729dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp"
-        tools:ignore="ExtraText">
+        tools:ignore="ExtraText"
+        tools:layout_editor_absoluteX="-1dp"
+        tools:layout_editor_absoluteY="1dp">
 
         <Space
             android:layout_width="match_parent"
@@ -21,27 +21,33 @@
 
         <TextView
             android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             style="@style/Napisy.1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="@string/deposit" />
+
+        //button wpłaty
 
         <EditText
             android:id="@+id/deposit"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="8"
-            android:textSize="14dp"
-            android:inputType="numberDecimal"/>
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            android:text="test"
+            android:textSize="20dp" />
 
-            //button wpłaty
+        //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
+
         <Button
             android:id="@+id/buttonAdd"
+            style="@style/ButtonStyle.Add"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/ButtonStyle.Add"
+            android:layout_marginTop="10dp"
+            android:onClick="onClickButtonAdd"
             android:text="@string/button_add"
-            android:onClick="onClickButtonAdd"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -55,28 +61,31 @@
 
                 <TextView
                     android:id="@+id/textView1"
+                    style="@style/Napisy.2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    style="@style/Napisy.2"
                     android:text="@string/textJar1" />
 
                 <TextView
                     android:id="@+id/textValue1"
+                    style="@style/Napisy.2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    style="@style/Napisy.2"
                     android:text="0" />
             </LinearLayout>
         </LinearLayout>
 
         //button wypłaty z opłat stałych
+
+        //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
+
         <Button
             android:id="@+id/button_rem_Jar1"
+            style="@style/ButtonStyle.Rem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/ButtonStyle.Rem"
-            android:text="@string/button_rem_Jar1"
-            android:onClick="onClickButtonRemJar1"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
+            android:onClick="onClickButtonRemJar1"
+            android:text="@string/button_rem_Jar1" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -85,28 +94,30 @@
 
             <TextView
                 android:id="@+id/textView2"
+                style="@style/Napisy.2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/Napisy.2"
                 android:text="@string/textJar2" />
 
             <TextView
                 android:id="@+id/textValue2"
+                style="@style/Napisy.2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/Napisy.2"
                 android:text="0" />
 
         </LinearLayout>
 
         //button wypłaty z przyjemności
+
         <Button
             android:id="@+id/button_rem_Jar2"
+            style="@style/ButtonStyle.Rem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/ButtonStyle.Rem"
-            android:text="@string/button_rem_Jar2"
-            android:onClick="onClickButtonRemJar2"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
+            android:onClick="onClickButtonRemJar2"
+            android:text="@string/button_rem_Jar2" />
+        //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -115,27 +126,29 @@
 
             <TextView
                 android:id="@+id/textView3"
+                style="@style/Napisy.2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/Napisy.2"
                 android:text="@string/textJar3" />
 
             <TextView
                 android:id="@+id/textValue3"
+                style="@style/Napisy.2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/Napisy.2"
                 android:text="0" />
         </LinearLayout>
 
         //button wypłaty z inwestycji
+
         <Button
             android:id="@+id/button_rem_Jar3"
+            style="@style/ButtonStyle.Rem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/ButtonStyle.Rem"
-            android:text="@string/button_rem_Jar3"
-            android:onClick="onClickButtonRemJar3"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
+            android:onClick="onClickButtonRemJar3"
+            android:text="@string/button_rem_Jar3" />
+        //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -144,27 +157,29 @@
 
             <TextView
                 android:id="@+id/textView4"
+                style="@style/Napisy.2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/Napisy.2"
                 android:text="@string/textJar4" />
 
             <TextView
                 android:id="@+id/textValue4"
+                style="@style/Napisy.2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/Napisy.2"
                 android:text="0" />
         </LinearLayout>
 
         //button wypłaty z edukacji
+
         <Button
             android:id="@+id/button_rem_Jar4"
+            style="@style/ButtonStyle.Rem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/ButtonStyle.Rem"
-            android:text="@string/button_rem_Jar4"
-            android:onClick="onClickButtonRemJar4"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
+            android:onClick="onClickButtonRemJar4"
+            android:text="@string/button_rem_Jar4" />
+        //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -173,27 +188,29 @@
 
             <TextView
                 android:id="@+id/textView5"
+                style="@style/Napisy.2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/Napisy.2"
                 android:text="@string/textJar5" />
 
             <TextView
                 android:id="@+id/textValue5"
+                style="@style/Napisy.2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/Napisy.2"
                 android:text="0" />
         </LinearLayout>
 
         //button wypłaty z większych zakupów
+
         <Button
             android:id="@+id/button_rem_Jar5"
+            style="@style/ButtonStyle.Rem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/ButtonStyle.Rem"
-            android:text="@string/button_rem_Jar5"
-            android:onClick="onClickButtonRemJar5"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
+            android:onClick="onClickButtonRemJar5"
+            android:text="@string/button_rem_Jar5" />
+        //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -202,50 +219,54 @@
 
             <TextView
                 android:id="@+id/textView6"
+                style="@style/Napisy.2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/Napisy.2"
                 android:text="@string/textJar6" />
 
             <TextView
                 android:id="@+id/textValue6"
+                style="@style/Napisy.2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/Napisy.2"
                 android:text="0" />
         </LinearLayout>
 
         //button wypłaty z datków
+
         <Button
             android:id="@+id/button_rem_Jar6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             style="@style/ButtonStyle.Rem"
-            android:text="@string/button_rem_Jar6"
-            android:onClick="onClickButtonRemJar6"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickButtonRemJar6"
+            android:text="@string/button_rem_Jar6" />
+        //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
 
         <TextView
             android:id="@+id/textView1"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="30dp"
-            android:text="@string/przerwa" />
+            android:text="@string/przerwa"
+            android:textSize="30dp" />
 
         <TextView
             android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             style="@style/Napisy.3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="@string/clean" />
 
         //button oszczędzanie od nowa
+
         <Button
             android:id="@+id/button_Clean"
+            style="@style/ButtonStyle.Clean"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/ButtonStyle.Clean"
-            android:text="@string/button_Clean"
-            android:onClick="onClickButtonClean"/>  //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
+            android:onClick="onClickButtonClean"
+            android:text="@string/button_Clean" />
+        //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
 
     </LinearLayout>
 
