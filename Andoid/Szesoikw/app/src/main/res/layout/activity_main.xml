@@ -44,6 +44,7 @@
         <Button
             android:id="@+id/buttonAdd"
             style="@style/ButtonStyle.Add"
+            android:background="@drawable/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -87,7 +88,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onClickButtonRemJar1"
-            android:text="@string/button_rem_Jar1" />
+            android:text="@string/button_rem_Jar1"
+            android:background="@drawable/button2"/>/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -118,7 +120,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onClickButtonRemJar2"
-            android:text="@string/button_rem_Jar2" />
+            android:text="@string/button_rem_Jar2"
+            android:background="@drawable/button2"/>
         //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
 
         <LinearLayout
@@ -149,7 +152,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onClickButtonRemJar3"
-            android:text="@string/button_rem_Jar3" />
+            android:text="@string/button_rem_Jar3"
+            android:background="@drawable/button2"/>
         //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
 
         <LinearLayout
@@ -180,7 +184,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onClickButtonRemJar4"
-            android:text="@string/button_rem_Jar4" />
+            android:text="@string/button_rem_Jar4"
+            android:background="@drawable/button2"/>
         //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
 
         <LinearLayout
@@ -211,7 +216,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onClickButtonRemJar5"
-            android:text="@string/button_rem_Jar5" />
+            android:text="@string/button_rem_Jar5"
+            android:background="@drawable/button2"/>
         //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
 
         <LinearLayout
@@ -242,7 +248,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onClickButtonRemJar6"
-            android:text="@string/button_rem_Jar6" />
+            android:text="@string/button_rem_Jar6"
+            android:background="@drawable/button2"/>
         //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
 
         <TextView
@@ -259,8 +266,10 @@
             style="@style/ButtonStyle.Clean"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/button"
             android:onClick="onClickButtonClean"
-            android:text="@string/button_Clean"
+            android:text="@string/button_Clean" />
         //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
     </LinearLayout>
 </ScrollView>
