@@ -10,7 +10,7 @@
     <string name="button_Clean">Oszczędzam od nowa!</string>
     <string name="deposit">Ile wpłacasz lub wypłacasz?</string>
     <string name="clean">Jeśli chcesz rozpocząć oszczedzanie od nowa kliknij poniżej:)</string>
-    <string name="przerwa">-----------------------------------------------</string>
+    <string name="przerwa"> </string>
     <string name="textJar1">Opłaty stałe: </string>
     <string name="textJar2">Przyjemności: </string>
     <string name="textJar3">Inwestycje: </string>

@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:background="#CCCFCF"
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="490dp"
-        android:layout_height="956dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         tools:ignore="ExtraText"
         tools:layout_editor_absoluteX="-1dp"
-        tools:layout_editor_absoluteY="1dp">
+        tools:layout_editor_absoluteY="0dp"
+        >
 
         <Space
             android:layout_width="match_parent"
@@ -35,7 +37,6 @@
             android:ems="8"
             android:gravity="center"
             android:inputType="numberDecimal"
-            android:text="test"
             android:textSize="20dp" />
 
         //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
@@ -47,8 +48,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:onClick="onClickButtonAdd"
-            android:text="@string/button_add"
-            />
+            android:text="@string/button_add" />
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -246,15 +247,6 @@
 
         <TextView
             android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical|center_horizontal"
-            android:text="@string/przerwa"
-            android:textSize="30dp"
-            android:padding="10dp"/>
-
-        <TextView
-            android:id="@+id/textView1"
             style="@style/Napisy.3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -268,9 +260,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onClickButtonClean"
-            android:text="@string/button_Clean" />
+            android:text="@string/button_Clean"
         //wywołanie metody z MainActivity gdy zostanie wciśnięty przycisk
-
     </LinearLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
